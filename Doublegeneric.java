@@ -1,25 +1,27 @@
-class Plot<T> {
-    T name;
+class Boxx<T, L> {
+    T value;
+    L number;
 
-    void set(T name) {
-        this.name = name;
+    void set(T value, L number) {
+        this.value = value;
+        this.number = number;
     }
 
     T get() {
-        return name;
+        return value;
+
+    }
+
+    L getNumber() {
+        return number;
     }
 }
 
-class string extends Plot<String> {
-}
-
-class chart extends Plot<Character> {
-}
-
-public class Characterextend {
+class Doublegeneric {
     public static void main(String[] args) {
-        Plot<String> b1 = new Plot<>();
-        b1.set("Simran");
+        Boxx<Integer, Character> b1 = new Boxx<>();
+        b1.set(10, 'A');
         System.out.println(b1.get());
+        System.out.println(b1.getNumber());
     }
 }
